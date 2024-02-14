@@ -14,7 +14,6 @@ class TaskController extends Controller {
 	public function index() {
 		$tasks = Auth::user()->tasks()->latest()->get();
 
-		ddd($tasks);
 		return view('tasks.index', compact('tasks'));
 	}
 
